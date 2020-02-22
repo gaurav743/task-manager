@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb://127.0.0.1:27017/task-manager-api" , { //task-manager-api is the database we will create
+mongoose.connect( process.env.MONGODB_URL, { //task-manager-api is the database we will create
     useNewUrlParser : true , 
     useCreateIndex: true
 })
